@@ -1,0 +1,169 @@
+// This's for LEFT
+#left
+{
+    height: 100%;
+    width: 100%;
+    float: left;
+    // This is for TOP OF LEFT
+    #top
+    {
+        height: 8%;
+        width: 100%;
+        background-color: #4d88ff;
+        label
+        {
+            float: left;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: 10px;
+            color: white;
+        }
+        img
+        {
+            margin-top: 3px;
+        }
+        // This's for IMAGE PLUS of TOP LEFT
+        #image:hover img
+        {
+            filter: invert(1);
+            border-radius:50%;  
+            cursor: pointer;
+        }
+        #image
+        {
+            // position: relative;
+            width: 40px;
+            height: 40px;
+            float: right;
+            // margin: 4px 4px 0px 0px;
+            img
+            {
+                transition: all .3s ease-in-out;
+                margin: 5px;
+            }
+        }
+    }
+    // This is for Content of LEFT
+    #content
+    {
+        position: relative;
+        height: 92%;
+        width: 100%;
+        background-color: white;
+        overflow: auto;  
+        overflow-x: hidden;
+        ul
+        {
+            position: absolute;
+            list-style: none;
+            margin: 0;
+            padding: 0px 0px 0px 0px;
+            width: 100%;
+            .color {
+                background-color: #b3b3b3;
+            }
+            li
+            {
+                width: 100%;
+                height: 45px;
+                background-color: whitesmoke;
+                border-bottom: solid 2px black;
+                line-height: 40px;
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 20px;
+                font-style: italic;
+                font-weight: 500;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                .editinp
+                {
+                    position: absolute;
+                    z-index: 2;
+                    width: 99%;
+                    height: 90%;
+                    background-color: rgb(102, 102, 102);
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: 500;
+                    text-align: center;
+                }
+                .itemLeft
+                {
+                    flex: 7;
+                    a{
+                        color: black;
+                    }
+                }
+                .itemRight
+                {
+                    flex: 1;
+                    padding-top: 3px;
+                    background-color: whitesmoke;
+                    .btnfunc
+                    {
+                        width: 35px;
+                        height: 35px;
+                        transition: all 0.3s ease;
+                    }
+                    .btnfunc:hover
+                    {
+                        transition: all 0.3s ease;
+                        transform: rotate(90deg);
+                        filter: sopia(100%);
+                    }
+                    .hidefunc
+                    {
+                        position: absolute;
+                        top:0px;
+                        left: 0px;
+                        display: none;
+                        height: 99%;
+                        width: 87%;
+                        z-index: 1;
+                        background-color: rgb(207, 207, 207);
+                        #funcdiv
+                        {
+                            // background-color: rgb(102, 102, 102);
+                            position: absolute;
+                            display: flex;
+                            flex-direction: row;
+                            height: 90%;
+                            width: 100%;
+                            .editbtn
+                            {
+                                // flex: 1;
+                                margin: 3px 20px 0px 40px;
+                            }
+                            .timebtn
+                            {
+                                // flex: 1;
+                                margin: 2px 20px 0px 20px;
+                            }
+                            .deletebtn
+                            {
+                                // flex: 1;
+                                margin: 4px 20px 0px 20px;
+                            }
+                        }
+                    }
+                }
+                .show
+                {
+                    display: block;
+                }
+            }
+            #target 
+            {
+                display:none;
+                width: 98%;
+                height: 30px;
+                background-color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}

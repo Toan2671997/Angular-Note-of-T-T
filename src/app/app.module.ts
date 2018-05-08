@@ -8,7 +8,13 @@ import { LoginComponent } from './body/login/login.component';
 import { MenuAppComponent } from './body/login/menu-app/menu-app.component';
 import { ReminderComponent } from './body/login/menu-app/reminder/reminder.component';
 import { FormsModule } from '@angular/forms';
-import { CoreModule } from '../core/core,module';
+import { LeftComponent } from './body/login/menu-app/reminder/left/left.component';
+import { RightComponent } from './body/login/menu-app/reminder/right/right.component';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
+import { ReminderService } from '../core/services/reminder.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,14 +24,17 @@ import { CoreModule } from '../core/core,module';
     LoginComponent,
     MenuAppComponent,
     LoginComponent,
-    ReminderComponent
+    ReminderComponent,
+    LeftComponent,
+    RightComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    CoreModule,
+    AngularFireModule.initializeApp(environment.firebase, 'Angular-Note-of-TandT'),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [ReminderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
