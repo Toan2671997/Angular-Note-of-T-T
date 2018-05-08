@@ -1,0 +1,16 @@
+<!-- Right -->
+<div id="right">
+  <!-- Search -->
+  <div id=search>
+    <input id="inputSearch" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" placeholder="Search your reminders..."/>
+  </div>
+
+  <!-- Content -->
+  <div id=content>
+    ABC
+    <ul *ngFor="let reminder of reminder">
+      <li>{{reminder.title}}</li>
+    </ul>
+  </div>
+
+</div>

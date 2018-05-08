@@ -1,4 +1,4 @@
-export interface MyReminder {
+export interface MyReminderItem {
     id?: string;
     title?: string;
 }

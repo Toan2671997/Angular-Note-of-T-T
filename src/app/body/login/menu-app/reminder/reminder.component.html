@@ -1,61 +1,8 @@
-<div>
-  <!-- Left -->
+<div id="container">
   <div id="left">
-    <!-- Top -->
-    <div id="top">
-      <label style="margin-left: 5px;">Reminder</label>
-      <img src="../../../../../assets/note.png" width="40px" height="40px" style="filter: invert(1);"/>
-      <!-- Image -->
-      <div id="image">
-        <img class="toggle" src="../../../../../assets/plus.png" width="30px" height="30px"/>
-        <!-- <div id="target"><input type="text" placeholder="Want to create new Reminder?"></div> -->
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div id="content">
-      <ul id="list">
-        <input id="target" type="text" [(ngModel)]="reminder" (keyup.enter)="addReminder(reminder)" placeholder="Hello there!!!">
-        <li *ngFor="let item of reminders">
-              <a (click)="deleteReminder($event, item)" for="">{{item.title}}</a>
-              <img src="../../../../../assets/x.png" width="15px" height="15px" (dbclick) = "deleteItem($event,item)"/>
-        </li>
-
-        <!-- <li>
-          <a for="">abc</a>
-        </li>
-
-        <li>
-          <a for="">def</a>
-        </li> -->
-
-        <div *ngIf="reminders < 1" style="color:rgb(223, 223, 223);">
-          <p>Click the " + " button to start create your Remindes.</p>
-          <p style="text-align: center"> !!!JUST DO IT!!! </p>
-        </div>
-
-        <!-- <li class="footer">
-          <div>
-            0 items left
-          </div>
-        </li> -->
-    </ul>
-
-    </div>
   </div>
 
-  <!-- Right -->
   <div id="right">
-    <!-- Search -->
-    <div id=search>
-      <input id="inputSearch" type="text" (keyup)="search()" placeholder="Search your reminders..."/>
-    </div>
-
-    <!-- Content -->
-    <div id=content>
-      
-    </div>
-
+    <app-right></app-right>
   </div>
 </div>
-

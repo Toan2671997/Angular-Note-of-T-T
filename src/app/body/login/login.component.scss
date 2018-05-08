@@ -113,6 +113,55 @@ $highlight-color:#16abf0;
         a{
             color: white;
             text-decoration: none;
+   
+    table{
+        margin-bottom:10px;
+        tr{
+            display: block;
+            border: solid ,whitesmoke ;
+            width:288px;
+            height:30px;
+            border-radius: 6px;
+            margin-bottom: 3px;
+            float: none;
+            background-color: white;
+        #mot{
+                float: left;
+                margin: 0px;
+                width:288px;
+                height:30px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                font-family :aachen;
+                font-size: 20px;
+                border: none;
+                
+            }
+        #hai{
+            float: left;
+            margin: 0px;
+            width:258px;
+            height:30px;
+            border-bottom-left-radius: 6px;
+            font-family :aachen;
+            font-size: 20px;
+           border: none;
+        }
+        #ba{
+            float: none;
+            margin: 0px;
+            width: 30px;
+            height:30px;
+            border-bottom-right-radius: 6px;
+            padding-top: 2px;
+            background-color: white;
+        }
+        }   
+        }
+        input{
+            
+            width:20px;
+            height:20px;
         }
         a:hover{
           
@@ -120,5 +169,3 @@ $highlight-color:#16abf0;
         }
       }
 }
-
-  

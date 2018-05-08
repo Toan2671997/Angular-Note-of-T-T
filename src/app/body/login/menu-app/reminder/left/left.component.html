@@ -1,0 +1,48 @@
+<!-- Left -->
+<div id="left">
+  <!-- Top -->
+  <div id="top" (click)="hover()">
+    <label style="margin-left: 5px;">Reminder</label>
+    <img src="../../../../../assets/note.png" width="40px" height="40px" style="filter: invert(1);"/>
+    <!-- Image -->
+    <div id="image">
+      <img class="toggle" src="../../../../../assets/plus.png" width="30px" height="30px"/>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="content">
+    <ul id="list" >
+      <li class="divs" *ngFor="let reminder of reminders" (click)="change()">
+        <div class="itemLeft">
+            <a for="">{{reminder.title}}</a>
+        </div>
+        <input class="editinp" *ngIf="editState && reminderEdit.id == reminder.id" (keyup.enter)="updateReminder(reminder)" [(ngModel)]="reminder.title" />
+        <div class="itemRight">
+          <img class="btnfunc" src="../../../../../assets/circle.png" (click)="showfunc()"/>
+            <div class="hidefunc">
+              <div id="funcdiv">
+                  <img class="editbtn" src="../../../../../assets/edit.png" (click)="editReminder($event, reminder)" style="width: 37px; height: 37px;">
+                  <img class="timebtn" src="../../../../../assets/time.png" style="width: 39px; height: 39px;">
+                  <img class="deletebtn" src="../../../../../assets/delete.png" style="width: 37px; height: 37px;" (click)="deleteReminder($event, reminder)"/>
+              </div>
+            </div>
+        </div>
+      </li>
+      <li style="border: none" style="background-color: white; border-bottom: none; ">
+        <input autofocus id="target" type="text" [(ngModel)]="reminder.title" (keyup.enter)="addReminder()" placeholder="Hello there!!!">
+      </li>
+
+      <div *ngIf="reminders < 1" style="color: black; padding: 10px;">
+        <p>Click the " + " button to start create your Remindes.</p>
+      </div>
+
+      
+      <!-- <li class="footer">
+        <div>
+          0 items left
+        </div>
+      </li> -->
+    </ul>
+  </div>
+</div>
